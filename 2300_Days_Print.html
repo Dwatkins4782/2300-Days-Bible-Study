@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 2,300 Days of Daniel 8:14</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Fira+Code&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --gold: #B8922E;
+    --gold-light: #D4AD3C;
+    --dark: #1a1a2e;
+    --darker: #111122;
+    --accent: #3a86ff;
+    --text: #e0e0e0;
+    --text-muted: #9999aa;
+    --red: #e74c3c;
+  }
+
+  @page {
+    size: 11in 8.5in;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--darker);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .slide {
+    width: 11in;
+    height: 8.5in;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 70px;
+    background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+    page-break-after: always;
+    page-break-inside: avoid;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide:last-child { page-break-after: avoid; }
+
+  /* Title Slide */
+  .slide-title { text-align: center; }
+
+  .slide-title h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .slide-title .subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .verse-block {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold-light);
+    max-width: 650px;
+    line-height: 1.6;
+    padding: 16px 24px;
+    border-left: 3px solid var(--gold);
+    text-align: left;
+    background: rgba(184,146,46,0.06);
+    border-radius: 0 6px 6px 0;
+  }
+
+  .verse-block .ref {
+    display: block;
+    margin-top: 8px;
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  /* Content Slides */
+  .slide h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 22px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .slide h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+    margin-top: 14px;
+  }
+
+  .slide p, .slide li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+  }
+
+  .slide ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 850px;
+  }
+
+  .slide ul li {
+    padding: 5px 0 5px 24px;
+    position: relative;
+  }
+
+  .slide ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  .content-box {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(184,146,46,0.2);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .content-box h3 { margin-top: 0; }
+
+  .ornament {
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+    margin: 12px auto;
+    position: relative;
+  }
+  .ornament::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    background: var(--darker);
+  }
+
+  .highlight { color: var(--gold); font-weight: 600; }
+  .small-text { font-size: 0.85rem; color: var(--text-muted); }
+  .center { text-align: center; }
+
+  /* Math box */
+  .math-box {
+    font-family: 'Fira Code', monospace;
+    background: rgba(184,146,46,0.08);
+    border: 1px solid rgba(184,146,46,0.25);
+    border-radius: 8px;
+    padding: 18px 28px;
+    font-size: 1.15rem;
+    color: var(--gold-light);
+    text-align: center;
+    margin: 14px 0;
+  }
+
+  .math-box .big {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+    margin: 6px 0;
+  }
+
+  /* Insight box */
+  .insight-box {
+    background: linear-gradient(135deg, rgba(184,146,46,0.1), rgba(184,146,46,0.05));
+    border: 1px solid rgba(184,146,46,0.3);
+    border-radius: 10px;
+    padding: 18px 24px;
+    max-width: 750px;
+    text-align: center;
+    margin: 14px auto;
+  }
+
+  .insight-box p { font-size: 1.05rem; font-weight: 500; }
+
+  /* Badge */
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .badge-gold { background: rgba(184,146,46,0.2); color: var(--gold); border: 1px solid var(--gold); }
+  .badge-blue { background: rgba(58,134,255,0.2); color: var(--accent); border: 1px solid var(--accent); }
+
+  /* Horizontal Timeline */
+  .h-timeline {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 950px;
+    position: relative;
+    padding-top: 60px;
+    margin-top: 10px;
+  }
+
+  .h-timeline::before {
+    content: '';
+    position: absolute;
+    top: 78px;
+    left: 5%;
+    right: 5%;
+    height: 4px;
+    background: linear-gradient(to right, var(--gold), var(--gold-light), var(--gold));
+    border-radius: 2px;
+  }
+
+  .h-timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+  }
+
+  .h-timeline-item .h-dot {
+    width: 16px;
+    height: 16px;
+    background: var(--gold);
+    border-radius: 50%;
+    margin-top: 10px;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+
+  .h-timeline-item .h-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-top: 8px;
+    white-space: nowrap;
+  }
+
+  .h-timeline-item .h-event {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 4px;
+    line-height: 1.3;
+  }
+
+  /* Span bar */
+  .span-bar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 950px;
+    margin-top: 18px;
+  }
+
+  .span-section {
+    text-align: center;
+    padding: 6px 4px;
+    border-top: 2px solid var(--gold);
+    position: relative;
+    font-size: 0.72rem;
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+
+  .span-section::before,
+  .span-section::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    width: 2px;
+    height: 8px;
+    background: var(--gold);
+  }
+  .span-section::before { left: 0; }
+  .span-section::after { right: 0; }
+
+  /* Table */
+  .slide-table {
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+    margin: 10px 0;
+  }
+
+  .slide-table th {
+    background: rgba(184,146,46,0.15);
+    color: var(--gold);
+    font-weight: 600;
+    text-align: left;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  .slide-table td {
+    padding: 7px 14px;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* Vertical Timeline */
+  .timeline {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    padding: 10px 0;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--gold), var(--gold-light), var(--gold));
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+  }
+
+  .timeline-item .date {
+    width: 45%;
+    text-align: right;
+    padding-right: 24px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  .timeline-item .dot {
+    width: 14px;
+    height: 14px;
+    background: var(--gold);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  .timeline-item .event {
+    width: 45%;
+    padding-left: 24px;
+    font-size: 0.88rem;
+    line-height: 1.4;
+  }
+
+  .timeline-item .event strong {
+    color: var(--gold-light);
+    display: block;
+    font-size: 0.95rem;
+  }
+
+  .timeline-item .event .years {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: 'Fira Code', monospace;
+  }
+
+  /* Numbered list */
+  .numbered-list {
+    counter-reset: item;
+    list-style: none;
+    padding: 0;
+    max-width: 850px;
+  }
+
+  .numbered-list li {
+    padding: 7px 0 7px 44px;
+    position: relative;
+    counter-increment: item;
+  }
+
+  .numbered-list li::before {
+    content: counter(item);
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 28px;
+    height: 28px;
+    background: rgba(184,146,46,0.15);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 0.8rem;
+  }
+
+  .full-width { width: 100%; max-width: 1000px; }
+  .wide-content { width: 100%; max-width: 900px; }
+
+  /* Slide number */
+  .slide-num {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.2);
+  }
+</style>
+</head>
+<body>
+
+  <!-- SLIDE 1: Title -->
+  <div class="slide slide-title">
+    <div class="subtitle">A Comprehensive Bible Study</div>
+    <h1>The 2,300 Days<br>of Daniel 8:14</h1>
+    <div class="ornament"></div>
+    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px; letter-spacing: 1px;">
+      An Adventist Perspective on the Sanctuary, Judgment, and Prophetic Time
+    </p>
+    <div class="verse-block">
+      "Unto two thousand and three hundred days; then shall the sanctuary be cleansed."
+      <span class="ref">Daniel 8:14 (KJV)</span>
+    </div>
+    <div class="slide-num">1</div>
+  </div>
+
+  <!-- SLIDE 2: Overview Timeline -->
+  <div class="slide">
+    <h2>The Prophetic Timeline</h2>
+    <p class="center small-text" style="margin-bottom:6px;">2,300 years from 457 B.C. to A.D. 1844</p>
+
+    <div class="h-timeline">
+      <div class="h-timeline-item">
+        <div class="h-dot"></div>
+        <div class="h-date">457 B.C.</div>
+        <div class="h-event">Decree of<br>Artaxerxes</div>
+      </div>
+      <div class="h-timeline-item">
+        <div class="h-dot"></div>
+        <div class="h-date">408 B.C.</div>
+        <div class="h-event">Jerusalem<br>Rebuilt</div>
+      </div>
+      <div class="h-timeline-item">
+        <div class="h-dot"></div>
+        <div class="h-date">A.D. 27</div>
+        <div class="h-event">Messiah<br>Anointed</div>
+      </div>
+      <div class="h-timeline-item">
+        <div class="h-dot"></div>
+        <div class="h-date">A.D. 31</div>
+        <div class="h-event">Messiah<br>"Cut Off"</div>
+      </div>
+      <div class="h-timeline-item">
+        <div class="h-dot"></div>
+        <div class="h-date">A.D. 34</div>
+        <div class="h-event">Gospel to<br>Gentiles</div>
+      </div>
+      <div class="h-timeline-item">
+        <div class="h-dot"></div>
+        <div class="h-date">A.D. 1844</div>
+        <div class="h-event">Sanctuary<br>Cleansed</div>
+      </div>
+    </div>
+
+    <div class="span-bar" style="max-width:950px;">
+      <div class="span-section" style="flex: 1;">49 yrs<br><small>7 weeks</small></div>
+      <div class="span-section" style="flex: 5;">434 yrs &mdash; 62 weeks</div>
+      <div class="span-section" style="flex: 0.6;">3&frac12; yr</div>
+      <div class="span-section" style="flex: 0.6;">3&frac12; yr</div>
+      <div class="span-section" style="flex: 8;">1,810 years</div>
+    </div>
+
+    <div style="display:flex; justify-content:center; gap:24px; margin-top:16px;">
+      <span class="badge badge-gold">70 WEEKS = 490 YEARS</span>
+      <span class="badge badge-blue">2,300 YEARS TOTAL</span>
+    </div>
+    <div class="slide-num">2</div>
+  </div>
+
+  <!-- SLIDE 3: Daniel 8 Vision -->
+  <div class="slide">
+    <h2>Part 1: The Vision of Daniel 8</h2>
+    <p class="center small-text" style="margin-bottom:14px;">A vision given to Daniel ~550 B.C. at the citadel of Susa</p>
+    <div class="content-grid">
+      <div class="content-box">
+        <h3>The Ram &mdash; Medo-Persia</h3>
+        <p>Two horns (Media & Persia), the higher coming up last. Pushes westward, northward, southward.</p>
+        <div class="verse-block" style="font-size:0.9rem; margin-top:10px;">
+          "The ram which thou sawest having two horns are the kings of Media and Persia."
+          <span class="ref">Daniel 8:20</span>
+        </div>
+      </div>
+      <div class="content-box">
+        <h3>The He-Goat &mdash; Greece</h3>
+        <p>Notable horn between its eyes. Strikes the ram. Great horn breaks; four arise in its place.</p>
+        <div class="verse-block" style="font-size:0.9rem; margin-top:10px;">
+          "The rough goat is the king of Grecia: and the great horn... is the first king."
+          <span class="ref">Daniel 8:21</span>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1000px; margin-top:16px;">
+      <div class="content-box">
+        <h3>The Little Horn &mdash; Rome (Pagan &amp; Papal)</h3>
+        <p>Grows "exceeding great." Opposes the "Prince of the host" (Christ). Removes the daily (<em>tamid</em>). Casts truth to the ground.</p>
+        <p style="margin-top:8px;"><span class="highlight">Pagan Rome:</span> Crucified Christ, destroyed the temple (A.D. 70) &nbsp;&bull;&nbsp; <span class="highlight">Papal Rome:</span> Substituted a counterfeit mediation system for Christ's priestly ministry</p>
+      </div>
+    </div>
+    <div class="slide-num">3</div>
+  </div>
+
+  <!-- SLIDE 4: The Question & Answer -->
+  <div class="slide">
+    <h2>Part 2: The Question &amp; the Answer</h2>
+
+    <div class="verse-block" style="max-width:820px;">
+      "How long shall be the vision concerning the daily sacrifice, and the transgression of desolation, to give both the sanctuary and the host to be trodden under foot? And he said unto me, Unto two thousand and three hundred days; then shall the sanctuary be cleansed."
+      <span class="ref">Daniel 8:13-14</span>
+    </div>
+
+    <div class="content-grid" style="margin-top:18px;">
+      <div class="content-box">
+        <h3>The Question</h3>
+        <p>How long will the little horn's oppressive activities &mdash; removing the daily, trampling the sanctuary and God's people &mdash; continue?</p>
+      </div>
+      <div class="content-box">
+        <h3>The Answer</h3>
+        <p><span class="highlight" style="font-size:1.3rem;">2,300 days</span> &mdash; then the sanctuary shall be cleansed.</p>
+        <p style="margin-top:6px;">Hebrew <em>tsadaq</em>: "justified," "vindicated," "restored to its rightful state"</p>
+      </div>
+    </div>
+
+    <div class="insight-box" style="margin-top:18px;">
+      <p><strong>The Year-Day Principle:</strong> In apocalyptic prophecy, 1 prophetic day = 1 literal year<br>
+      <span class="small-text">(Numbers 14:34 &bull; Ezekiel 4:6)</span></p>
+      <div class="math-box" style="margin:10px auto 0;">
+        2,300 prophetic days = <span class="big">2,300 literal years</span>
+      </div>
+    </div>
+    <div class="slide-num">4</div>
+  </div>
+
+  <!-- SLIDE 5: Connection to Daniel 9 -->
+  <div class="slide">
+    <h2>Part 3: The Connection to Daniel 9</h2>
+    <p class="center small-text" style="margin-bottom:12px;">The key to the starting date</p>
+
+    <div class="full-width">
+      <div class="content-grid">
+        <div class="content-box">
+          <h3>Gabriel Returns</h3>
+          <p>Daniel 8 ends with the 2,300 days left <strong>unexplained</strong>. Daniel is sick and "none understood it." (Dan 8:27)</p>
+          <p style="margin-top:8px;">In Daniel 9, Gabriel returns:</p>
+          <div class="verse-block" style="font-size:0.88rem; margin-top:8px;">
+            "O Daniel, I am now come forth to give thee skill and understanding... consider the vision."
+            <span class="ref">Daniel 9:22-23</span>
+          </div>
+        </div>
+        <div class="content-box">
+          <h3>70 Weeks "Cut Off"</h3>
+          <p>Hebrew <em>chatak</em> = <span class="highlight">"cut off"</span></p>
+          <p style="margin-top:6px;">The 70 weeks (490 years) are <strong>cut off</strong> from the 2,300 years &mdash; forming the first portion of the longer prophecy.</p>
+          <div class="insight-box" style="margin-top:12px; padding:12px;">
+            <p style="font-size:0.95rem;">Both prophecies share the <span class="highlight">same starting point</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-box" style="margin-top:16px;">
+        <h3>The Starting Point: 457 B.C.</h3>
+        <p>The decree of <span class="highlight">Artaxerxes I</span> (Ezra 7:12-26) to <strong>restore and build Jerusalem</strong> &mdash; not merely the temple, but the city and its civil governance. This is the only decree that authorized full restoration of civil and judicial functions.</p>
+      </div>
+    </div>
+    <div class="slide-num">5</div>
+  </div>
+
+  <!-- SLIDE 6: 70-Week Proof -->
+  <div class="slide">
+    <h2>Part 4: The 70-Week Prophecy</h2>
+    <p class="center small-text" style="margin-bottom:12px;">490 years of precise fulfillment &mdash; proof of the starting date</p>
+
+    <table class="slide-table">
+      <thead>
+        <tr>
+          <th>Segment</th>
+          <th>Duration</th>
+          <th>Dates</th>
+          <th>Fulfillment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>7 Weeks</strong></td>
+          <td>49 years</td>
+          <td>457 &rarr; 408 B.C.</td>
+          <td>Jerusalem rebuilt "in troublous times"</td>
+        </tr>
+        <tr>
+          <td><strong>62 Weeks</strong></td>
+          <td>434 years</td>
+          <td>408 B.C. &rarr; A.D. 27</td>
+          <td>Jesus baptized &mdash; <em>"Messiah the Prince"</em></td>
+        </tr>
+        <tr>
+          <td><strong>&frac12; of 70th Week</strong></td>
+          <td>3&frac12; years</td>
+          <td>A.D. 27 &rarr; A.D. 31</td>
+          <td>Crucifixion &mdash; <em>"Cut off, not for Himself"</em></td>
+        </tr>
+        <tr>
+          <td><strong>&frac12; of 70th Week</strong></td>
+          <td>3&frac12; years</td>
+          <td>A.D. 31 &rarr; A.D. 34</td>
+          <td>Stoning of Stephen &mdash; Gospel to the Gentiles</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="math-box" style="max-width:650px;">
+      457 B.C. + 483 years = <span class="big">A.D. 27 &mdash; Baptism of Jesus</span>
+      <span style="font-size:0.85rem; color:var(--text-muted);">This stunning fulfillment validates 457 B.C. as the correct starting date.</span>
+    </div>
+    <div class="slide-num">6</div>
+  </div>
+
+  <!-- SLIDE 7: The Crucifixion -->
+  <div class="slide">
+    <h2>"In the Midst of the Week"</h2>
+
+    <div class="verse-block" style="max-width:800px;">
+      "And he shall confirm the covenant with many for one week: and in the midst of the week he shall cause the sacrifice and the oblation to cease."
+      <span class="ref">Daniel 9:27</span>
+    </div>
+
+    <div class="content-grid" style="margin-top:20px;">
+      <div class="content-box" style="text-align:center;">
+        <h3>A.D. 31 &mdash; The Cross</h3>
+        <p style="font-size:1.2rem; color:var(--gold);">A.D. 27 + 3&frac12; years = A.D. 31</p>
+        <ul style="text-align:left; margin-top:10px;">
+          <li>Jesus crucified in the spring of A.D. 31</li>
+          <li>"Cut off, but not for Himself" &mdash; He died for the world</li>
+          <li>The temple veil torn from top to bottom (Matt. 27:51)</li>
+          <li>The sacrificial system met its fulfillment</li>
+        </ul>
+      </div>
+      <div class="content-box" style="text-align:center;">
+        <h3>A.D. 34 &mdash; End of 70 Weeks</h3>
+        <p style="font-size:1.2rem; color:var(--gold);">A.D. 31 + 3&frac12; years = A.D. 34</p>
+        <ul style="text-align:left; margin-top:10px;">
+          <li>Stephen stoned (Acts 7)</li>
+          <li>The gospel goes to the Gentiles (Acts 8-10)</li>
+          <li>End of the 490-year Jewish probation</li>
+          <li>490 of 2,300 years now fulfilled</li>
+        </ul>
+      </div>
+    </div>
+    <div class="slide-num">7</div>
+  </div>
+
+  <!-- SLIDE 8: 1844 -->
+  <div class="slide">
+    <h2>Part 5: The Terminus &mdash; A.D. 1844</h2>
+
+    <div class="math-box" style="max-width:650px; margin-bottom:20px;">
+      457 B.C. + 2,300 years = <span class="big">A.D. 1844</span>
+      "Then shall the sanctuary be cleansed"
+    </div>
+
+    <div class="content-grid">
+      <div class="content-box">
+        <h3>What Sanctuary?</h3>
+        <p>The earthly temple was destroyed in A.D. 70 &mdash; long before 1844.</p>
+        <p style="margin-top:8px;">Therefore, the sanctuary cleansed in 1844 must be <span class="highlight">the heavenly sanctuary</span> &mdash; "the true tabernacle which the Lord pitched, and not man" (Heb. 8:2).</p>
+      </div>
+      <div class="content-box">
+        <h3>Biblical Evidence</h3>
+        <ul>
+          <li><strong>Hebrews 8:1-2</strong> &mdash; Christ ministers in the "true tabernacle"</li>
+          <li><strong>Hebrews 9:23-24</strong> &mdash; Earthly was a "pattern" of the heavenly</li>
+          <li><strong>Revelation 11:19</strong> &mdash; The ark of His testament seen in heaven</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="insight-box" style="margin-top:16px;">
+      <p>If the first <strong>490 years</strong> were fulfilled with pinpoint accuracy,<br>we can trust that the terminus in <span class="highlight">1844</span> is equally reliable.</p>
+    </div>
+    <div class="slide-num">8</div>
+  </div>
+
+  <!-- SLIDE 9: Day of Atonement -->
+  <div class="slide">
+    <h2>The Day of Atonement &mdash; Type &amp; Antitype</h2>
+    <p class="center small-text" style="margin-bottom:14px;">Leviticus 16 &bull; The meaning of "cleansing"</p>
+
+    <table class="slide-table" style="max-width:920px;">
+      <thead>
+        <tr>
+          <th>Earthly Day of Atonement</th>
+          <th style="text-align:center; width:40px;">&rarr;</th>
+          <th>Heavenly Antitype (1844&ndash;)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Once a year &mdash; 10th day of 7th month</td>
+          <td style="text-align:center; color:var(--gold);">&rarr;</td>
+          <td>Once in history &mdash; beginning 1844</td>
+        </tr>
+        <tr>
+          <td>High priest enters the Most Holy Place</td>
+          <td style="text-align:center; color:var(--gold);">&rarr;</td>
+          <td>Christ enters Most Holy Place of heavenly sanctuary</td>
+        </tr>
+        <tr>
+          <td>Blood on the mercy seat (over Ten Commandments)</td>
+          <td style="text-align:center; color:var(--gold);">&rarr;</td>
+          <td>Christ's blood applied; lives measured by God's law</td>
+        </tr>
+        <tr>
+          <td>Sanctuary cleansed from accumulated sins</td>
+          <td style="text-align:center; color:var(--gold);">&rarr;</td>
+          <td>Sins blotted out for those in Christ (Acts 3:19)</td>
+        </tr>
+        <tr>
+          <td>Scapegoat (azazel) bears sins to the wilderness</td>
+          <td style="text-align:center; color:var(--gold);">&rarr;</td>
+          <td>Satan bears ultimate responsibility for sin</td>
+        </tr>
+        <tr>
+          <td>A day of judgment &mdash; "afflict your souls"</td>
+          <td style="text-align:center; color:var(--gold);">&rarr;</td>
+          <td>Investigative judgment &mdash; books are opened (Dan. 7:10)</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="slide-num">9</div>
+  </div>
+
+  <!-- SLIDE 10: Daniel 7 -->
+  <div class="slide">
+    <h2>Part 6: The Judgment Scene &mdash; Daniel 7</h2>
+
+    <div class="verse-block" style="max-width:850px;">
+      "I beheld till the thrones were cast down, and the Ancient of days did sit... the judgment was set, and the books were opened. I saw... one like the Son of man came... to the Ancient of days."
+      <span class="ref">Daniel 7:9-10, 13-14</span>
+    </div>
+
+    <div class="wide-content" style="margin-top:18px;">
+      <ul class="numbered-list">
+        <li>This is a <span class="highlight">pre-Advent judgment</span> &mdash; it occurs <strong>before</strong> Christ's second coming</li>
+        <li>The Son of Man comes <strong>to the Ancient of Days</strong> (the Father) &mdash; not to earth</li>
+        <li>Occurs <strong>after</strong> the little horn's 1,260 years (A.D. 538&ndash;1798) and <strong>before</strong> the saints receive the kingdom</li>
+        <li><span class="highlight">Books are opened</span> &mdash; indicating an investigation of records (Mal. 3:16; Rev. 20:12)</li>
+        <li><strong>Result:</strong> The Son of Man receives "dominion, and glory, and a kingdom" (Daniel 7:14)</li>
+      </ul>
+    </div>
+
+    <div class="insight-box" style="margin-top:16px;">
+      <p>Daniel 7 and Daniel 8:14 perfectly parallel each other &mdash;<br>the <span class="highlight">cleansing/judgment begins in 1844</span></p>
+    </div>
+    <div class="slide-num">10</div>
+  </div>
+
+  <!-- SLIDE 11: Three Angels -->
+  <div class="slide">
+    <h2>Part 7: The Three Angels' Messages</h2>
+    <p class="center small-text" style="margin-bottom:10px;">Revelation 14:6-12</p>
+
+    <div class="verse-block" style="max-width:800px; margin-bottom:18px;">
+      "Fear God, and give glory to him; for the hour of his judgment IS COME: and worship him that made heaven, and earth, and the sea, and the fountains of waters."
+      <span class="ref">Revelation 14:7</span>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:12px; max-width:850px; width:100%;">
+      <div class="content-box" style="border-left: 4px solid var(--gold);">
+        <h3 style="margin-top:0;">First Angel &mdash; The Everlasting Gospel</h3>
+        <p>The hour of judgment <strong>has come</strong>. Worship the <strong>Creator</strong> &mdash; echoing the fourth commandment's creation language. A call to Sabbath observance.</p>
+      </div>
+      <div class="content-box" style="border-left: 4px solid var(--accent);">
+        <h3 style="margin-top:0;">Second Angel &mdash; Babylon Is Fallen</h3>
+        <p>Apostate religious systems have rejected truth. God calls His people <strong>out</strong> of confusion and error.</p>
+      </div>
+      <div class="content-box" style="border-left: 4px solid var(--red);">
+        <h3 style="margin-top:0;">Third Angel &mdash; Solemn Warning</h3>
+        <p>A warning against receiving the <strong>mark of the beast</strong>. The most solemn warning in all of Scripture.</p>
+      </div>
+    </div>
+    <div class="slide-num">11</div>
+  </div>
+
+  <!-- SLIDE 12: Practical Significance -->
+  <div class="slide">
+    <h2>Part 8: What This Means for Us Today</h2>
+
+    <div style="display:flex; flex-direction:column; gap:12px; max-width:900px; width:100%;">
+      <div class="content-box" style="display:flex; gap:16px; align-items:flex-start;">
+        <div style="font-size:1.8rem; color:var(--gold); flex-shrink:0; font-family:'Playfair Display',serif; font-weight:900;">1</div>
+        <div>
+          <h3 style="margin-top:0;">Christ Is Our High Priest &mdash; Now</h3>
+          <p>He is actively ministering on our behalf in the heavenly sanctuary. We can come <strong>boldly</strong> to the throne of grace (Hebrews 4:14-16).</p>
+        </div>
+      </div>
+      <div class="content-box" style="display:flex; gap:16px; align-items:flex-start;">
+        <div style="font-size:1.8rem; color:var(--gold); flex-shrink:0; font-family:'Playfair Display',serif; font-weight:900;">2</div>
+        <div>
+          <h3 style="margin-top:0;">We Live in the Antitypical Day of Atonement</h3>
+          <p>A time for heart-searching, confession, and full surrender to Christ. <em>"Repent... that your sins may be blotted out"</em> (Acts 3:19).</p>
+        </div>
+      </div>
+      <div class="content-box" style="display:flex; gap:16px; align-items:flex-start;">
+        <div style="font-size:1.8rem; color:var(--gold); flex-shrink:0; font-family:'Playfair Display',serif; font-weight:900;">3</div>
+        <div>
+          <h3 style="margin-top:0;">The Judgment Vindicates God &amp; His People</h3>
+          <p><strong>Not a cause for fear</strong> for those in Christ. God demonstrates His grace is sufficient and His sacrifice effective.</p>
+        </div>
+      </div>
+      <div class="content-box" style="display:flex; gap:16px; align-items:flex-start;">
+        <div style="font-size:1.8rem; color:var(--gold); flex-shrink:0; font-family:'Playfair Display',serif; font-weight:900;">4</div>
+        <div>
+          <h3 style="margin-top:0;">We Have a Present-Truth Message</h3>
+          <p>The three angels' messages are not relics of 1844 &mdash; they are God's message for <strong>this hour</strong>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">12</div>
+  </div>
+
+  <!-- SLIDE 13: Common Objections -->
+  <div class="slide">
+    <h2>Part 9: Common Objections &amp; Responses</h2>
+
+    <div style="display:flex; flex-direction:column; gap:10px; max-width:900px; width:100%;">
+      <div class="content-box">
+        <h3 style="margin-top:0; color:var(--red);">"The 2,300 days are literal, not years."</h3>
+        <p>Literal days (~6.3 years) cannot span Medo-Persia, Greece, and Rome. The year-day principle is biblically established (Num. 14:34; Eze. 4:6). Gabriel says the vision is for "the time of the end."</p>
+      </div>
+      <div class="content-box">
+        <h3 style="margin-top:0; color:var(--red);">"This is about Antiochus Epiphanes."</h3>
+        <p>Antiochus was a minor king (not "exceeding great"), his desecration lasted ~3 years (not 2,300), and the "Prince of the host" fits Christ, not a Jewish priest.</p>
+      </div>
+      <div class="content-box">
+        <h3 style="margin-top:0; color:var(--red);">"Daniel 9 is not connected to Daniel 8."</h3>
+        <p>Hebrew <em>chatak</em> means "cut off" from a larger whole. Gabriel references the prior unexplained vision. Thematic continuity binds the chapters inseparably.</p>
+      </div>
+      <div class="content-box">
+        <h3 style="margin-top:0; color:var(--red);">"There is no heavenly sanctuary."</h3>
+        <p>Hebrews 8-9 is built on the heavenly sanctuary's reality. Revelation depicts its altar (8:3-4), lampstands (1:12), and Ark (11:19). The earthly was always a "copy and shadow."</p>
+      </div>
+    </div>
+    <div class="slide-num">13</div>
+  </div>
+
+  <!-- SLIDE 14: Master Timeline -->
+  <div class="slide">
+    <h2>Master Timeline</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="date">457 B.C.</div>
+        <div class="dot"></div>
+        <div class="event">
+          <strong>Decree of Artaxerxes</strong>
+          "Restore and build Jerusalem" (Ezra 7)
+          <div class="years">START &mdash; Year 0 of 2,300</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">408 B.C.</div>
+        <div class="dot"></div>
+        <div class="event">
+          <strong>Jerusalem Rebuilt</strong>
+          "In troublous times" (Daniel 9:25)
+          <div class="years">49 years &mdash; 7 weeks</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">A.D. 27</div>
+        <div class="dot"></div>
+        <div class="event">
+          <strong>Baptism of Jesus</strong>
+          "Messiah the Prince" anointed (Mark 1:9-11)
+          <div class="years">483 years &mdash; 69 weeks</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">A.D. 31</div>
+        <div class="dot"></div>
+        <div class="event">
+          <strong>Crucifixion of Christ</strong>
+          "Cut off, but not for Himself" (Matt. 27)
+          <div class="years">Midst of 70th week</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">A.D. 34</div>
+        <div class="dot"></div>
+        <div class="event">
+          <strong>Gospel to the Gentiles</strong>
+          Stoning of Stephen (Acts 7)
+          <div class="years">490 years &mdash; End of 70 weeks</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="date" style="font-size:1.5rem;">A.D. 1844</div>
+        <div class="dot" style="width:18px;height:18px;"></div>
+        <div class="event">
+          <strong style="font-size:1.05rem;">Sanctuary Cleansed</strong>
+          Investigative Judgment Begins
+          <div class="years">2,300 years &mdash; END OF PROPHECY</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">14</div>
+  </div>
+
+  <!-- SLIDE 15: Conclusion -->
+  <div class="slide slide-title">
+    <h1 style="font-size:2.6rem;">We Serve a Risen Savior</h1>
+    <div class="ornament"></div>
+    <p style="max-width:700px; text-align:center; font-size:1.05rem; line-height:1.7; margin-bottom:24px;">
+      The 2,300-day prophecy is the <span class="highlight">longest time prophecy in the Bible</span>. Its fulfillment marks the opening of the final phase of Christ's heavenly ministry. Rooted in Scripture, validated by precise fulfillment, and proclaimed in the three angels' messages &mdash; this prophecy gives us our <strong>identity, mission, and urgency</strong>.
+    </p>
+
+    <div class="verse-block" style="max-width:600px;">
+      "He which testifieth these things saith, Surely I come quickly. Amen. Even so, come, Lord Jesus."
+      <span class="ref">Revelation 22:20</span>
+    </div>
+
+    <p class="small-text" style="margin-top:30px;">
+      Further Study: Daniel 7-9 &bull; Leviticus 16, 23 &bull; Hebrews 7-10 &bull; Revelation 14:6-12
+    </p>
+    <div class="slide-num">15</div>
+  </div>
+
+</body>
+</html>
