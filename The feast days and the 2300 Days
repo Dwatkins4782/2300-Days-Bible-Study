@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Lord's Appointed Times → The 2,300 Days</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Georgia',serif;background:#0a0a1a;color:#e8e0d0;overflow-x:hidden}
+.slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:40px 20px;max-width:960px;margin:0 auto;border-bottom:2px solid rgba(212,175,55,0.3);position:relative}
+.slide-num{position:absolute;top:20px;right:20px;font-size:14px;color:#d4af37;opacity:0.6;font-family:monospace}
+h1{font-size:clamp(28px,5vw,52px);color:#d4af37;text-align:center;margin-bottom:30px;line-height:1.2;font-weight:400;letter-spacing:1px}
+h2{font-size:clamp(22px,4vw,38px);color:#d4af37;margin-bottom:24px;line-height:1.3;font-weight:400}
+h3{font-size:clamp(18px,3vw,26px);color:#c9a84c;margin:20px 0 14px;font-weight:400}
+p,.verse,.point,.note{font-size:clamp(15px,2.2vw,19px);line-height:1.75;margin-bottom:16px}
+.verse{background:rgba(212,175,55,0.08);border-left:3px solid #d4af37;padding:16px 20px;margin:20px 0;font-style:italic;border-radius:0 8px 8px 0}
+.verse cite{display:block;text-align:right;font-style:normal;color:#d4af37;margin-top:8px;font-size:14px}
+.point{padding:10px 0 10px 24px;position:relative}
+.point::before{content:'✦';position:absolute;left:0;color:#d4af37}
+.note{background:rgba(139,69,19,0.15);border:1px solid rgba(212,175,55,0.2);padding:16px 20px;border-radius:8px;margin:16px 0}
+.note strong{color:#d4af37}
+.divider{text-align:center;margin:30px 0;color:#d4af37;font-size:24px;letter-spacing:12px;opacity:0.5}
+.title-slide{text-align:center;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px 20px}
+.title-slide .subtitle{font-size:clamp(16px,2.5vw,22px);color:#c9a84c;margin-top:16px;font-style:italic;max-width:600px;line-height:1.6}
+.title-slide .ref{margin-top:30px;font-size:14px;color:rgba(232,224,208,0.5)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:16px 0}
+@media(max-width:640px){.two-col{grid-template-columns:1fr}}
+.col{background:rgba(212,175,55,0.05);padding:16px;border-radius:8px;border:1px solid rgba(212,175,55,0.15)}
+.col h4{color:#d4af37;margin-bottom:10px;font-size:16px;font-weight:400}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:clamp(13px,1.8vw,16px)}
+th{background:rgba(212,175,55,0.15);color:#d4af37;padding:10px 12px;text-align:left;font-weight:400}
+td{padding:10px 12px;border-bottom:1px solid rgba(212,175,55,0.1)}
+tr:hover td{background:rgba(212,175,55,0.05)}
+.highlight{color:#d4af37;font-weight:bold}
+.segue{background:linear-gradient(135deg,rgba(139,69,19,0.2),rgba(212,175,55,0.1));padding:30px;border-radius:12px;margin:20px 0;text-align:center;border:1px solid rgba(212,175,55,0.3)}
+.segue h2{margin-bottom:16px}
+.timeline{position:relative;padding-left:30px;margin:20px 0}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:rgba(212,175,55,0.3)}
+.tl-item{position:relative;margin-bottom:20px;padding-left:20px}
+.tl-item::before{content:'';position:absolute;left:-26px;top:6px;width:12px;height:12px;border-radius:50%;background:#d4af37}
+.tl-item .tl-date{color:#d4af37;font-size:14px;font-weight:bold}
+.chart-box{background:rgba(212,175,55,0.05);border:1px solid rgba(212,175,55,0.2);padding:16px;border-radius:8px;margin:20px 0;font-family:monospace;font-size:clamp(11px,1.6vw,14px);line-height:1.8;overflow-x:auto;white-space:pre}
+.nav{position:fixed;bottom:20px;right:20px;display:flex;gap:8px;z-index:100}
+.nav a{background:rgba(212,175,55,0.2);color:#d4af37;border:1px solid rgba(212,175,55,0.4);padding:8px 14px;border-radius:6px;text-decoration:none;font-size:13px;backdrop-filter:blur(10px)}
+.nav a:hover{background:rgba(212,175,55,0.4)}
+.toc{list-style:none;counter-reset:toc}
+.toc li{counter-increment:toc;padding:8px 0;border-bottom:1px solid rgba(212,175,55,0.1)}
+.toc li::before{content:counter(toc) ". ";color:#d4af37;font-weight:bold}
+.toc li a{color:#e8e0d0;text-decoration:none}
+.toc li a:hover{color:#d4af37}
+.warning-box{background:rgba(180,30,30,0.12);border:1px solid rgba(180,30,30,0.3);padding:16px 20px;border-radius:8px;margin:16px 0}
+.warning-box strong{color:#e85050}
+.compare-table td:first-child{color:#e85050;font-weight:bold}
+.compare-table td:last-child{color:#50e870;font-weight:bold}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<a href="#top">↑ Top</a>
+<a href="#segue">→ 2300 Days</a>
+</nav>
+
+<!-- ==================== TITLE SLIDE ==================== -->
+<div class="title-slide" id="top">
+<span class="slide-num">PRESENTATION STUDY</span>
+<h1>The Lord's Appointed Times</h1>
+<p class="subtitle">From Holy Days to Holidays: Understanding God's Prophetic Calendar and the Counterfeit — A Journey Into the 2,300-Day Prophecy of Daniel 8:14</p>
+<div class="verse" style="max-width:600px;margin:30px auto">
+"Speak unto the children of Israel, and say unto them, Concerning the feasts of the LORD, which ye shall proclaim to be holy convocations, even these are <em>my feasts</em>."
+<cite>— Leviticus 23:2 KJV</cite>
+</div>
+<p class="ref">A Bible Study Presentation — SDA Perspective</p>
+</div>
+
+<!-- ==================== TABLE OF CONTENTS ==================== -->
+<div class="slide" id="toc">
+<span class="slide-num">OUTLINE</span>
+<h2>Study Outline</h2>
+<p>This presentation moves through three major sections before opening the 2,300-day prophecy:</p>
+<ul class="toc">
+<li><a href="#part1">From "Holy Day" to "Holiday" — How We Lost the Meaning</a></li>
+<li><a href="#part2">The Mo'edim — God's Appointed Times Defined</a></li>
+<li><a href="#part3">The True New Year — Abib/Nisan, Not January</a></li>
+<li><a href="#part4">Seasons, Seeds, and the Harvest — God's Calendar in Nature</a></li>
+<li><a href="#part5">The Seven Feasts — God's Prophetic Blueprint</a></li>
+<li><a href="#part6">The Counterfeit — Satan's Substitution of Pagan Holidays</a></li>
+<li><a href="#part7">What God Hates — Syncretism and Corrupted Worship</a></li>
+<li><a href="#part8">The Rebellion Pattern — From Golden Calf to Today</a></li>
+<li><a href="#segue"><strong>THE SEGUE → The 2,300-Day Prophecy</strong></a></li>
+<li><a href="#part9">Daniel 8: The Vision and the Question</a></li>
+<li><a href="#part10">Daniel 9: The Key to the Starting Date</a></li>
+<li><a href="#part11">The 70 Weeks — Proof in the Feasts</a></li>
+<li><a href="#part12">The Millerite Movement and the Great Disappointment</a></li>
+<li><a href="#part13">October 22, 1844 — The Day of Atonement Fulfilled</a></li>
+<li><a href="#part14">The 7,000-Year Plan — The Great Week of Redemption</a></li>
+<li><a href="#part15">Conclusion — The Feast of Tabernacles Awaits</a></li>
+</ul>
+</div>
+
+<!-- ==================== PART 1: HOLY DAY TO HOLIDAY ==================== -->
+<div class="slide" id="part1">
+<span class="slide-num">SECTION 1</span>
+<h2>From "Holy Day" to "Holiday"</h2>
+<h3>The Word Tells the Story</h3>
+<p>The English word <strong>"holiday"</strong> originates from the Old English <em>hāligdæg</em> — a combination of <em>hālig</em> (holy) and <em>dæg</em> (day). It literally meant <span class="highlight">"holy day."</span></p>
+
+<div class="timeline">
+<div class="tl-item">
+<div class="tl-date">~950 A.D. — Old English</div>
+<p><em>Hāligdæg</em> — strictly religious festivals, sacred days of rest</p>
+</div>
+<div class="tl-item">
+<div class="tl-date">12th–15th Century — Middle English</div>
+<p><em>Haliday</em> — retains religious meaning but begins to include leisure and celebration</p>
+</div>
+<div class="tl-item">
+<div class="tl-date">16th Century — Modern English</div>
+<p>"Holiday" — expands to cover any celebratory day, secular or religious</p>
+</div>
+<div class="tl-item">
+<div class="tl-date">Today</div>
+<p>Synonymous with vacation, time off, recreation — the "holy" is gone</p>
+</div>
+</div>
+
+<div class="note">
+<strong>Key Takeaway:</strong> The very word reveals what happened. God's sacred, set-apart days were gradually secularized, paganized, and emptied of their prophetic meaning. What was once "holy" became merely "fun." But God still has His appointed times — and they still carry prophetic weight.
+</div>
+</div>
+
+<!-- ==================== PART 2: MO'EDIM DEFINED ==================== -->
+<div class="slide" id="part2">
+<span class="slide-num">SECTION 2</span>
+<h2>The Mo'edim — God's Appointed Times</h2>
+
+<h3>Hebrew: מוֹעֵד — <em>Mo'ed</em> (Strong's H4150)</h3>
+<p>This word means far more than "feast" or "festival." Its root meaning is <span class="highlight">"an appointment — a fixed time or season."</span></p>
+
+<div class="note">
+<strong>Full definition:</strong> Properly, an appointment; a fixed time or season; specifically, a festival; by implication, an assembly convened for a definite purpose; the place of meeting; also a signal appointed beforehand. Translated as: appointed sign, appointed time, solemn assembly, congregation, set feast, due season, set time.
+</div>
+
+<p>God didn't give Israel "holidays." He gave them <strong>divine appointments</strong> — set times with prophetic purpose, each one pointing to a specific act in the plan of salvation.</p>
+
+<h3>Statutes and Ordinances</h3>
+<div class="two-col">
+<div class="col">
+<h4>Statutes (H2708 — <em>chûqqâh</em>)</h4>
+<p>Feminine of H2706: appointed custom, manner, ordinance, statute. Used 104 times. These are God's <em>permanent prescriptions.</em></p>
+</div>
+<div class="col">
+<h4>Ordinances (H2706 — <em>chôq</em>)</h4>
+<p>An enactment; an appointment of time, space, quantity, labor, or usage. Used 127 times. These are God's <em>decreed boundaries.</em></p>
+</div>
+</div>
+
+<div class="verse">
+"These are the statutes and judgments, which ye shall observe to do in the land, which the LORD God of thy fathers giveth thee to possess it, all the days that ye live upon the earth."
+<cite>— Deuteronomy 12:1 KJV</cite>
+</div>
+
+<div class="verse">
+"And the LORD appointed a set time [H4150], saying, To morrow the LORD shall do this thing in the land."
+<cite>— Exodus 9:5 KJV</cite>
+</div>
+</div>
+
+<!-- ==================== PART 3: TRUE NEW YEAR ==================== -->
+<div class="slide" id="part3">
+<span class="slide-num">SECTION 3</span>
+<h2>The True New Year — Abib/Nisan</h2>
+
+<p>The world celebrates January 1 as New Year's Day. But where did this come from?</p>
+
+<div class="warning-box">
+<strong>The Pagan Origin:</strong> January 1 was established in honor of <strong>Janus</strong>, the two-faced Roman god of beginnings, gates, and transitions. The Julian calendar (46 B.C.) and later Pope Gregory XIII's calendar (1582) both enshrined this pagan date. We inherited a calendar from Rome, not from God.
+</div>
+
+<h3>God's New Year: The Month of Abib</h3>
+
+<div class="verse">
+"This month shall be unto you the beginning of months: it shall be the first month of the year to you."
+<cite>— Exodus 12:2 KJV</cite>
+</div>
+
+<div class="verse">
+"Remember this day, in which ye came out from Egypt, out of the house of bondage... This day came ye out in the month Abib."
+<cite>— Exodus 13:3–4 KJV</cite>
+</div>
+
+<div class="verse">
+"Observe the month of Abib, and keep the passover unto the LORD thy God: for in the month of Abib the LORD thy God brought thee forth out of Egypt by night."
+<cite>— Deuteronomy 16:1 KJV</cite>
+</div>
+
+<p>Abib (later called Nisan) falls in <strong>late March to early April</strong> — the time of spring, new life, and the Passover. God's year begins with <em>redemption</em>, not with a pagan deity.</p>
+
+<div class="note">
+<strong>"The time of the Passover corresponded to the close of March or the beginning of April, and the whole land was bright with flowers, and glad with the song of birds."</strong> — <em>The Desire of Ages</em>, p. 75
+</div>
+</div>
+
+<!-- ==================== PART 4: SEASONS AND SEEDS ==================== -->
+<div class="slide" id="part4">
+<span class="slide-num">SECTION 4</span>
+<h2>Seasons, Seeds, and the Harvest</h2>
+<h3>God's Calendar Is Written in Nature</h3>
+
+<p>Even creation testifies to God's appointed times. The seasons themselves are a parable:</p>
+
+<div class="two-col">
+<div class="col">
+<h4>Fall & Winter</h4>
+<p>Everything <strong>dies</strong>. Leaves fall. Animals hibernate — entering a state resembling death. The earth rests. Cold and darkness prevail.</p>
+</div>
+<div class="col">
+<h4>Spring</h4>
+<p>New life <strong>springs forth</strong>. Animals awaken. Seeds germinate. Flowers appear. The very word "spring" means to <em>leap into life.</em></p>
+</div>
+</div>
+
+<div class="verse">
+"For, lo, the winter is past, the rain is over and gone; the flowers appear on the earth; the time of the singing of birds is come... Arise, my love, my fair one, and come away."
+<cite>— Song of Solomon 2:11–13 KJV</cite>
+</div>
+
+<div class="verse">
+"Behold, the former things are come to pass, and new things do I declare: before they spring forth I tell you of them."
+<cite>— Isaiah 42:9 KJV</cite>
+</div>
+
+<h3>The Parable of the Sower and the Harvest</h3>
+<p>Jesus built His teaching on the agricultural cycle — the very cycle that God's feasts are built upon:</p>
+
+<div class="verse">
+"For the earth bringeth forth fruit of herself; first the blade, then the ear, after that the full corn in the ear. But when the fruit is brought forth, immediately he putteth in the sickle, because the harvest is come."
+<cite>— Mark 4:28–29 KJV</cite>
+</div>
+
+<div class="verse">
+"Put ye in the sickle, for the harvest is ripe: come, get you down; for the press is full, the fats overflow; for their wickedness is great."
+<cite>— Joel 3:13 KJV</cite>
+</div>
+
+<div class="note">
+<strong>Ellen G. White:</strong> "When the character of Christ shall be perfectly reproduced in His people, then He will come to claim them as His own." — <em>Christ's Object Lessons</em>, p. 69. The feasts trace the <em>growth cycle of the gospel seed</em> — from planting (Passover) to harvest (Tabernacles).
+</div>
+</div>
+
+<!-- ==================== PART 5: THE SEVEN FEASTS ==================== -->
+<div class="slide" id="part5">
+<span class="slide-num">SECTION 5</span>
+<h2>The Seven Feasts of Leviticus 23</h2>
+<h3>God's Prophetic Blueprint for the Plan of Salvation</h3>
+
+<div class="verse">
+"Speak unto the children of Israel, and say unto them, Concerning the feasts of the LORD, which ye shall proclaim to be holy convocations, even these are my feasts."
+<cite>— Leviticus 23:2 KJV</cite>
+</div>
+
+<p>Note: God calls them <span class="highlight">"MY feasts"</span> — not "Jewish feasts." They belong to the Lord, and they carry universal prophetic significance.</p>
+
+<table>
+<tr><th>#</th><th>Feast</th><th>Date</th><th>Historical</th><th>Prophetic Fulfillment</th></tr>
+<tr><td>1</td><td><strong>Passover</strong></td><td>Nisan 14</td><td>Deliverance from Egypt</td><td>Crucifixion of Christ (A.D. 31)</td></tr>
+<tr><td>2</td><td><strong>Unleavened Bread</strong></td><td>Nisan 15–21</td><td>Exodus from slavery</td><td>Christ in the tomb; removal of sin</td></tr>
+<tr><td>3</td><td><strong>Firstfruits</strong></td><td>After Sabbath</td><td>First grain harvest</td><td>Resurrection of Christ</td></tr>
+<tr><td>4</td><td><strong>Pentecost</strong></td><td>50 days later</td><td>Wheat harvest; Law at Sinai</td><td>Outpouring of Holy Spirit (A.D. 31)</td></tr>
+<tr><td colspan="5" style="text-align:center;color:#d4af37;padding:14px"><em>— The long summer harvest season: the church age —</em></td></tr>
+<tr><td>5</td><td><strong>Trumpets</strong></td><td>Tishri 1</td><td>Blowing of trumpets</td><td>Millerite awakening / Day of the Lord</td></tr>
+<tr><td>6</td><td><strong>Atonement</strong></td><td>Tishri 10</td><td>Cleansing of sanctuary</td><td>Investigative judgment (Oct. 22, 1844)</td></tr>
+<tr><td>7</td><td><strong>Tabernacles</strong></td><td>Tishri 15–22</td><td>Harvest ingathering; booths</td><td>Second Coming / Millennium / New Earth</td></tr>
+</table>
+
+<h3>The Spiritual Heart of the Feasts</h3>
+<div class="verse">
+"For thou desirest not sacrifice; else would I give it: thou delightest not in burnt offering. The sacrifices of God are a broken spirit: a broken and a contrite heart, O God, thou wilt not despise."
+<cite>— Psalm 51:16–17 KJV</cite>
+</div>
+
+<div class="note">
+<strong>Key insight:</strong> The feasts were never merely ritual. They were <em>appointments with God</em> designed to develop character, teach the plan of salvation, and point forward to Christ. The sacrificial system pointed to Christ; the feast calendar traces His entire ministry from Calvary to the New Earth.
+</div>
+</div>
+
+<!-- ==================== PART 6: THE COUNTERFEIT ==================== -->
+<div class="slide" id="part6">
+<span class="slide-num">SECTION 6</span>
+<h2>The Counterfeit — Satan's Substitution</h2>
+
+<div class="verse">
+"I will ascend into heaven, I will exalt my throne above the stars of God: I will sit also upon the mount of the congregation, in the sides of the north: I will ascend above the heights of the clouds; I will be like the most High."
+<cite>— Isaiah 14:13–14 KJV</cite>
+</div>
+
+<p>Satan's strategy has always been <strong>counterfeiting</strong> — not outright denial of worship, but <em>substitution</em>. Replace God's appointed times with pagan-rooted alternatives.</p>
+
+<h3>Pagan Deities Behind Modern "Holidays"</h3>
+
+<table>
+<tr><th>Deity</th><th>Origin</th><th>Connection</th><th>Scripture Warning</th></tr>
+<tr><td><strong>Baal / Ashtoreth</strong></td><td>Canaan</td><td>Sun/fertility worship → Easter traditions (eggs, rabbits)</td><td>Judges 10:6; Jer. 7:18</td></tr>
+<tr><td><strong>Tammuz</strong></td><td>Sumer/Babylon</td><td>Winter solstice death/resurrection myth → Christmas timing</td><td>Ezekiel 8:14</td></tr>
+<tr><td><strong>Asherah</strong></td><td>Canaan</td><td>Sacred groves/poles → decorated trees</td><td>Jer. 10:3–4; Deut. 16:21</td></tr>
+<tr><td><strong>Sol Invictus</strong></td><td>Rome</td><td>Dec. 25 = birthday of the sun god (274 A.D.)</td><td>Deut. 12:29–32</td></tr>
+<tr><td><strong>Mithras</strong></td><td>Persia/Rome</td><td>Born Dec. 25; mystery cult rival to Christianity</td><td>2 Cor. 6:17</td></tr>
+<tr><td><strong>Saturn</strong></td><td>Rome</td><td>Saturnalia (Dec. 17): feasting, gift-giving</td><td>1 Cor. 10:20–21</td></tr>
+<tr><td><strong>Odin</strong></td><td>Norse</td><td>Yule/Wild Hunt → Santa Claus traditions</td><td>Deut. 12:30–31</td></tr>
+<tr><td><strong>Janus</strong></td><td>Rome</td><td>Two-faced god → January 1 "New Year"</td><td>Exodus 12:2</td></tr>
+<tr><td><strong>Molech</strong></td><td>Canaan/Ammon</td><td>Child sacrifice / fire festivals</td><td>Lev. 18:21; 2 Kings 23:10</td></tr>
+</table>
+
+<h3>The "Santa" Counterfeit</h3>
+<p>The parallels between Santa Claus and Christ are not coincidental — they reveal a deliberate counterfeit designed to redirect worship:</p>
+
+<div class="two-col">
+<div class="col">
+<h4>Santa Claus</h4>
+<p>White hair like wool. Comes from the North. Omniscient — "knows if you've been bad or good." Makes a list, checks it twice. Rewards based on behavior. Hour of coming a mystery. Gives gifts once yearly.</p>
+</div>
+<div class="col">
+<h4>Jesus Christ</h4>
+<p>Hair white like wool (Rev. 1:14). Comes from the sides of the North (Psa. 48:2). All-knowing (Rev. 19:6). Books of judgment (Rev. 20:12; Dan. 8:14). Rewards according to works. Coming as a thief (Matt. 24:36). Day of Atonement — once yearly (Lev. 23:26–32).</p>
+</div>
+</div>
+
+<div class="warning-box">
+<strong>The offerings made to "Santa":</strong> Children leave out cookies and milk — bread and drink offerings before an idol. Compare: <em>"My meat also which I gave thee, fine flour, and oil, and honey, wherewith I fed thee, thou hast even set it before them for a sweet savour"</em> (Ezekiel 16:19). The bread and drink offering belonged to God (Numbers 6:15–16).
+</div>
+</div>
+
+<!-- ==================== PART 7: WHAT GOD HATES ==================== -->
+<div class="slide" id="part7">
+<span class="slide-num">SECTION 7</span>
+<h2>What God Hates — Corrupted Worship</h2>
+
+<p>God is not silent about what happens when His appointed times are replaced or corrupted with paganism:</p>
+
+<div class="verse">
+"I hate, I despise your feast days, and I will not smell in your solemn assemblies. Though ye offer me burnt offerings and your meat offerings, I will not accept them: neither will I regard the peace offerings of your fat beasts. Take thou away from me the noise of thy songs; for I will not hear the melody of thy viols."
+<cite>— Amos 5:21–23 KJV</cite>
+</div>
+
+<div class="verse">
+"Bring no more vain oblations; incense is an abomination unto me; the new moons and sabbaths, the calling of assemblies, I cannot away with; it is iniquity, even the solemn meeting. Your new moons and your appointed feasts my soul hateth: they are a trouble unto me; I am weary to bear them."
+<cite>— Isaiah 1:13–14 KJV</cite>
+</div>
+
+<div class="note">
+<strong>Critical distinction:</strong> God is not here condemning His own feasts. He is condemning <em>the way Israel was observing them</em> — with insincerity, hypocrisy, and pagan mixture. He hates "YOUR feast days" — feasts corrupted by human and pagan additions — while "MY feasts" (Leviticus 23:2) remain sacred.
+</div>
+
+<div class="verse">
+"Ye shall utterly destroy all the places, wherein the nations which ye shall possess served their gods, upon the high mountains, and upon the hills, and under every green tree: And ye shall overthrow their altars, and break their pillars, and burn their groves with fire... Ye shall not do so unto the LORD your God."
+<cite>— Deuteronomy 12:2–4 KJV</cite>
+</div>
+</div>
+
+<!-- ==================== PART 8: THE REBELLION PATTERN ==================== -->
+<div class="slide" id="part8">
+<span class="slide-num">SECTION 8</span>
+<h2>The Rebellion Pattern — From Golden Calf to Today</h2>
+
+<div class="verse">
+"And he received them at their hand, and fashioned it with a graving tool, after he had made it a molten calf: and they said, These be thy gods, O Israel... And Aaron made proclamation, and said, To morrow is a feast to the LORD."
+<cite>— Exodus 32:4–5 KJV</cite>
+</div>
+
+<p>Notice the pattern: Aaron didn't say "tomorrow is a feast to Baal." He said <span class="highlight">"a feast to the LORD"</span> — but it was <em>pagan worship dressed in the Lord's name.</em> This is the essence of syncretism: calling pagan practices "Christian."</p>
+
+<div class="note">
+<strong>The pattern repeats:</strong> Baal-peor (Numbers 25:2–5) — Israel joined pagan feasting and bowed to pagan gods, provoking God's fierce anger. The same spirit is at work when pagan-rooted celebrations (Christmas, Easter, Halloween, January 1) are baptized with Christian names while God's actual appointed times are ignored or despised.
+</div>
+
+<div class="verse">
+"Yea, the stork in the heaven knoweth her appointed times; and the turtle and the crane and the swallow observe the time of their coming; but my people know not the judgment of the LORD."
+<cite>— Jeremiah 8:7 KJV</cite>
+</div>
+
+<p>Even the animals know God's appointed times — but His people have forgotten them.</p>
+
+<div class="divider">✦ ✦ ✦</div>
+</div>
+
+<!-- ==================== THE SEGUE ==================== -->
+<div class="slide" id="segue">
+<span class="slide-num">THE BRIDGE</span>
+<div class="segue">
+<h2>The Segue: From Appointed Times to the 2,300-Day Prophecy</h2>
+<p style="font-size:clamp(15px,2.2vw,19px);line-height:1.8;margin-top:16px">
+We have established that God operates on a <strong>precise prophetic calendar</strong> — His <em>mo'edim</em>, His appointed times. These are not relics of the Old Testament. They are the <strong>prophetic scaffolding</strong> of the plan of salvation.
+</p>
+<p style="font-size:clamp(15px,2.2vw,19px);line-height:1.8;margin-top:12px">
+Now we must ask: <strong>Is there a prophecy in Scripture that ties all the feast days together into one grand prophetic timeline?</strong>
+</p>
+<p style="font-size:clamp(15px,2.2vw,19px);line-height:1.8;margin-top:12px">
+The answer is <span class="highlight">YES</span>. It is the <strong>longest time prophecy in the Bible</strong> — and it encompasses the fulfillment of every feast, from Passover to the Day of Atonement to the final harvest.
+</p>
+</div>
+
+<div class="verse" style="max-width:700px;margin:24px auto">
+"Unto two thousand and three hundred days; then shall the sanctuary be cleansed."
+<cite>— Daniel 8:14 KJV</cite>
+</div>
+
+<p style="text-align:center">The spring feasts were fulfilled <em>within</em> this prophecy. The Day of Atonement was fulfilled at its <em>terminus</em>. The Feast of Tabernacles awaits its fulfillment <em>beyond</em> it. Let us now open this prophecy.</p>
+</div>
+
+<!-- ==================== PART 9: DANIEL 8 ==================== -->
+<div class="slide" id="part9">
+<span class="slide-num">SECTION 9</span>
+<h2>Daniel 8: The Vision and the Question</h2>
+
+<h3>The Three Powers</h3>
+<table>
+<tr><th>Symbol</th><th>Identity</th><th>Scripture</th></tr>
+<tr><td>Ram with two horns</td><td><strong>Medo-Persia</strong></td><td>Daniel 8:3–4, 20</td></tr>
+<tr><td>He-goat with great horn</td><td><strong>Greece</strong> (Alexander the Great)</td><td>Daniel 8:5–8, 21</td></tr>
+<tr><td>Little horn — exceeding great</td><td><strong>Rome</strong> (Pagan & Papal)</td><td>Daniel 8:9–12, 23–25</td></tr>
+</table>
+
+<h3>What the Little Horn Does</h3>
+<p class="point">Magnifies itself against the <strong>"Prince of the host"</strong> — Christ (v. 11)</p>
+<p class="point">Takes away the <strong>"daily"</strong> (<em>tamid</em>) — Christ's continual priestly ministry (v. 11)</p>
+<p class="point">Casts down the <strong>"place of His sanctuary"</strong> (v. 11)</p>
+<p class="point"><strong>Casts truth to the ground</strong> (v. 12) — substituting counterfeit worship for God's appointed times</p>
+
+<h3>The Question and the Answer</h3>
+<div class="verse">
+"How long shall be the vision concerning the daily sacrifice, and the transgression of desolation, to give both the sanctuary and the host to be trodden under foot? And he said unto me, Unto two thousand and three hundred days; then shall the sanctuary be cleansed."
+<cite>— Daniel 8:13–14 KJV</cite>
+</div>
+
+<div class="note">
+<strong>Year-Day Principle:</strong> 2,300 prophetic days = <strong>2,300 literal years</strong> (Numbers 14:34; Ezekiel 4:6). The vision spans empires covering centuries — it cannot be literal days.
+</div>
+</div>
+
+<!-- ==================== PART 10: DANIEL 9 ==================== -->
+<div class="slide" id="part10">
+<span class="slide-num">SECTION 10</span>
+<h2>Daniel 9: The Key to the Starting Date</h2>
+
+<h3>Gabriel Returns to Explain</h3>
+<p>In Daniel 8, Gabriel explained the ram, goat, and little horn — but left the <strong>2,300 days unexplained</strong> (Daniel 8:26–27). In Daniel 9, he returns:</p>
+
+<div class="verse">
+"O Daniel, I am now come forth to give thee skill and understanding... therefore understand the matter, and consider the vision."
+<cite>— Daniel 9:22–23 KJV</cite>
+</div>
+
+<h3>The 70 Weeks "Cut Off"</h3>
+<div class="verse">
+"Seventy weeks are determined [Hebrew: <em>chatak</em> = 'cut off'] upon thy people and upon thy holy city..."
+<cite>— Daniel 9:24 KJV</cite>
+</div>
+
+<p>70 weeks (490 years) are <strong>"cut off"</strong> from the 2,300 years. They share the same starting point.</p>
+
+<h3>The Starting Point: 457 B.C.</h3>
+<div class="verse">
+"From the going forth of the commandment to restore and to build Jerusalem unto the Messiah the Prince shall be seven weeks, and threescore and two weeks."
+<cite>— Daniel 9:25 KJV</cite>
+</div>
+
+<p>The decree of <strong>Artaxerxes I in 457 B.C.</strong> (Ezra 7:12–26) is the only decree that authorized the full civil and judicial restoration of Jerusalem.</p>
+
+<div class="note">
+<strong>The calculation:</strong> 457 B.C. + 2,300 years = <strong>A.D. 1844</strong>
+</div>
+</div>
+
+<!-- ==================== PART 11: 70 WEEKS AND FEASTS ==================== -->
+<div class="slide" id="part11">
+<span class="slide-num">SECTION 11</span>
+<h2>The 70 Weeks — Proof Written in the Feast Days</h2>
+
+<p>The 70-week prophecy is not merely a timeline — it is a <strong>feast-day fulfillment calendar</strong>. Every major event falls on a God-appointed feast day:</p>
+
+<table>
+<tr><th>Event</th><th>Date</th><th>Feast Fulfilled</th><th>Calculation</th></tr>
+<tr><td>Decree of Artaxerxes</td><td>457 B.C.</td><td>—</td><td>Starting point</td></tr>
+<tr><td>Jerusalem rebuilt</td><td>408 B.C.</td><td>—</td><td>+ 49 years (7 weeks)</td></tr>
+<tr><td><strong>Baptism of Jesus</strong></td><td>A.D. 27</td><td>Messiah anointed</td><td>+ 483 years (69 weeks)</td></tr>
+<tr><td><strong>Crucifixion</strong></td><td>A.D. 31 (spring)</td><td><span class="highlight">PASSOVER — Nisan 14</span></td><td>Midst of 70th week</td></tr>
+<tr><td><strong>Christ in tomb</strong></td><td>A.D. 31</td><td><span class="highlight">UNLEAVENED BREAD — Nisan 15</span></td><td>High Sabbath</td></tr>
+<tr><td><strong>Resurrection</strong></td><td>A.D. 31</td><td><span class="highlight">FIRSTFRUITS</span></td><td>Day after Sabbath</td></tr>
+<tr><td><strong>Holy Spirit</strong></td><td>A.D. 31</td><td><span class="highlight">PENTECOST</span></td><td>50 days after Firstfruits</td></tr>
+<tr><td>Gospel to Gentiles</td><td>A.D. 34</td><td>End of Jewish probation</td><td>+ 490 years (70 weeks)</td></tr>
+</table>
+
+<div class="note">
+<strong>The pattern is ironclad:</strong> Every spring feast was fulfilled on its exact calendar day during the first portion of the 2,300 years. This validates the starting date (457 B.C.), confirms the year-day principle, and demands that the fall feasts be fulfilled with equal precision.
+</div>
+
+<div class="verse">
+"For even Christ our passover is sacrificed for us."
+<cite>— 1 Corinthians 5:7 KJV</cite>
+</div>
+<div class="verse">
+"But now is Christ risen from the dead, and become the firstfruits of them that slept."
+<cite>— 1 Corinthians 15:20 KJV</cite>
+</div>
+</div>
+
+<!-- ==================== PART 12: MILLERITE MOVEMENT ==================== -->
+<div class="slide" id="part12">
+<span class="slide-num">SECTION 12</span>
+<h2>The Millerite Movement and the Great Disappointment</h2>
+
+<h3>William Miller (1782–1849)</h3>
+<p>A Baptist farmer from upstate New York who, beginning around 1816, conducted a systematic verse-by-verse study of Scripture. His findings:</p>
+
+<p class="point">Correctly applied the year-day principle</p>
+<p class="point">Correctly connected Daniel 8 and Daniel 9</p>
+<p class="point">Correctly identified 457 B.C. as the starting date</p>
+<p class="point">Correctly calculated the 2,300 years ending ~1843–1844</p>
+
+<h3>Miller's Critical Error</h3>
+<table class="compare-table">
+<tr><th>What He Got Wrong</th><th>What He Got Right</th></tr>
+<tr><td>The "sanctuary" = the earth</td><td>The date: 1844 ✓</td></tr>
+<tr><td>"Cleansing" = Second Coming / fire</td><td>The calculation: 457 B.C. + 2,300 ✓</td></tr>
+<tr><td>The event was wrong</td><td>The time was right ✓</td></tr>
+</table>
+
+<h3>The Seventh Month Movement — Samuel S. Snow</h3>
+<p>In the summer of 1844, Snow made the feast-day argument that would pinpoint the <em>exact day:</em></p>
+
+<p class="point">The spring feasts were fulfilled on their exact calendar days</p>
+<p class="point">Therefore the fall feasts must be fulfilled on their exact days too</p>
+<p class="point">"Cleansing of the sanctuary" = <strong>Day of Atonement</strong> = Tishri 10</p>
+<p class="point">In 1844, Karaite Tishri 10 = <strong>October 22</strong></p>
+
+<h3>The Great Disappointment — October 22, 1844</h3>
+
+<div class="verse" style="border-left-color:#e85050">
+"We confidently expected to see Jesus Christ and all the holy angels with Him... We wept, and wept, till the day dawn."
+<cite>— Hiram Edson</cite>
+</div>
+
+<p>Jesus did not come. The devastation was immense. But a faithful remnant held onto the prophetic foundation and asked: <em>not "when?" but "what?"</em></p>
+
+<h3>The Morning After — Hiram Edson's Insight</h3>
+<p>Walking through a cornfield the morning of October 23, Edson was impressed:</p>
+
+<div class="verse">
+"Instead of our High Priest coming out of the Most Holy of the heavenly sanctuary to come to this earth... He for the first time entered on that day the second apartment of that sanctuary; and He had a work to perform in the Most Holy before coming to this earth."
+<cite>— Hiram Edson</cite>
+</div>
+
+<h3>Foretold in Scripture</h3>
+<p><strong>Revelation 10:8–10</strong> — The little book (Daniel) is sweet in the mouth (the joy of expecting Christ) but bitter in the belly (the Great Disappointment). Then: <em>"Thou must prophesy again"</em> (v. 11).</p>
+</div>
+
+<!-- ==================== PART 13: OCTOBER 22, 1844 ==================== -->
+<div class="slide" id="part13">
+<span class="slide-num">SECTION 13</span>
+<h2>October 22, 1844 — The Day of Atonement Fulfilled</h2>
+
+<h3>The Correct Understanding</h3>
+<p>The prophecy was not about Christ coming <strong>to</strong> earth but about Christ moving <strong>within</strong> the heavenly sanctuary — from the Holy Place to the Most Holy Place — to begin the antitypical Day of Atonement.</p>
+
+<div class="two-col">
+<div class="col">
+<h4>The Earthly Day of Atonement (Lev. 16)</h4>
+<p>Once a year, Tishri 10. High priest enters Most Holy Place. Blood sprinkled on mercy seat. Sanctuary cleansed from accumulated sin. Scapegoat sent to wilderness. A day of judgment — "afflict your souls."</p>
+</div>
+<div class="col">
+<h4>The Heavenly Antitype (1844–present)</h4>
+<p>Christ enters Most Holy Place of heavenly sanctuary. Books of record examined (Dan. 7:10). Sins blotted out for those in Christ (Acts 3:19). God's character vindicated before the universe. Satan (the antitypical scapegoat) to bear final responsibility.</p>
+</div>
+</div>
+
+<div class="verse">
+"Having therefore, brethren, boldness to enter into the holiest by the blood of Jesus, by a new and living way, which he hath consecrated for us, through the veil, that is to say, his flesh; and having an high priest over the house of God; let us draw near with a true heart in full assurance of faith."
+<cite>— Hebrews 10:19–22 KJV</cite>
+</div>
+
+<h3>The Three Angels' Messages</h3>
+<p>The judgment that began in 1844 is proclaimed in Revelation 14:</p>
+<p class="point"><strong>First Angel:</strong> "The hour of His judgment IS COME" — worship the Creator (Rev. 14:6–7)</p>
+<p class="point"><strong>Second Angel:</strong> "Babylon is fallen" — apostate systems rejected truth (Rev. 14:8)</p>
+<p class="point"><strong>Third Angel:</strong> Warning against the mark of the beast (Rev. 14:9–12)</p>
+
+<div class="note">
+<strong>The feast connection:</strong> The first angel's message IS the antitypical Feast of Trumpets — the alarm before the Day of Atonement. The Millerite movement sounded that trumpet. The Day of Atonement began October 22, 1844. We are living in it now.
+</div>
+</div>
+
+<!-- ==================== PART 14: 7,000-YEAR PLAN ==================== -->
+<div class="slide" id="part14">
+<span class="slide-num">SECTION 14</span>
+<h2>The 7,000-Year Plan — The Great Week of Redemption</h2>
+
+<h3>Creation Week as a Template for History</h3>
+
+<div class="verse">
+"One day is with the Lord as a thousand years, and a thousand years as one day."
+<cite>— 2 Peter 3:8 KJV</cite>
+</div>
+
+<p>Just as God created in <strong>six days</strong> and rested on the <strong>seventh</strong>, the history of sin spans approximately <strong>6,000 years</strong>, followed by the <strong>1,000-year millennial Sabbath rest</strong> of Revelation 20.</p>
+
+<table>
+<tr><th>Creation Day</th><th>Millennium</th><th>Approximate Period</th></tr>
+<tr><td>Day 1</td><td>1st millennium</td><td>~4000–3000 B.C. — Creation, Fall, early patriarchs</td></tr>
+<tr><td>Day 2</td><td>2nd millennium</td><td>~3000–2000 B.C. — Flood, scattering, call of Abraham</td></tr>
+<tr><td>Day 3</td><td>3rd millennium</td><td>~2000–1000 B.C. — Israel, Exodus, Promised Land</td></tr>
+<tr><td>Day 4</td><td>4th millennium</td><td>~1000 B.C.–A.D. 1 — Christ, the "Sun of Righteousness," enters</td></tr>
+<tr><td>Day 5</td><td>5th millennium</td><td>~A.D. 1–1000 — Gospel spreading, church multiplies</td></tr>
+<tr><td>Day 6</td><td>6th millennium</td><td>~A.D. 1000–2000+ — Reformation, judgment, final events</td></tr>
+<tr><td><strong>Day 7</strong></td><td><strong>7th millennium</strong></td><td><strong>The Millennium — Sabbath rest of the earth</strong></td></tr>
+</table>
+
+<div class="note">
+<strong>Where the 2,300 days fall:</strong> The prophecy terminates in 1844 — approximately year 5,844 from creation — placing us firmly in the closing centuries of the 6,000 years. The investigative judgment began near the end of the sixth "day," just as the earthly Day of Atonement came near the end of the yearly cycle.
+</div>
+
+<div class="verse">
+"There remaineth therefore a rest [Greek: <em>sabbatismos</em> — a Sabbath-keeping] to the people of God."
+<cite>— Hebrews 4:9 KJV</cite>
+</div>
+
+<h3>Early Church Witness</h3>
+<p class="point"><strong>Epistle of Barnabas</strong> (~A.D. 100): "In six days, that is, in six thousand years, all things will be finished. And He rested on the seventh day."</p>
+<p class="point"><strong>Irenaeus</strong> (~A.D. 180): "In as many days as this world was made, in so many thousand years shall it be concluded."</p>
+<p class="point"><strong>Ellen G. White:</strong> "For six thousand years, Satan's work of rebellion has 'made the earth to tremble.'" — <em>The Great Controversy</em>, p. 659</p>
+
+<div class="warning-box">
+<strong>Caution:</strong> This framework gives <em>urgency</em>, not dates. "Of that day and hour knoweth no man" (Matt. 24:36). Biblical chronology has uncertainties. But the convergence is unmistakable — we are near the end of the sixth millennium.
+</div>
+</div>
+
+<!-- ==================== PART 15: CONCLUSION ==================== -->
+<div class="slide" id="part15">
+<span class="slide-num">CONCLUSION</span>
+<h2>The Feast of Tabernacles Awaits</h2>
+
+<h3>The Grand Convergence</h3>
+
+<div class="chart-box">
+ALL LINES CONVERGE:
+
+✦ God's Mo'edim (appointed times) → Prophetic blueprint of salvation
+✦ Spring feasts fulfilled on exact days → Validates the prophetic calendar
+✦ 2,300 days end Oct. 22, 1844    → Day of Atonement fulfilled
+✦ Millerite movement               → Antitypical Feast of Trumpets
+✦ 6,000 years nearing completion   → Sabbath millennium approaches
+✦ Three Angels' Messages go forth  → Final warning to the world
+✦ Christ in the Most Holy Place    → Last intercession
+
+STILL FUTURE:
+✦ Close of probation               → End of antitypical Day of Atonement
+✦ Second Coming                    → FEAST OF TABERNACLES begins
+✦ Millennium (1,000 years)         → The 7th-day Sabbath of earth
+✦ New Earth                        → God tabernacles with His people forever
+</div>
+
+<div class="verse">
+"And I heard a great voice out of heaven saying, Behold, the tabernacle of God is with men, and he will dwell with them, and they shall be his people, and God himself shall be with them, and be their God."
+<cite>— Revelation 21:3 KJV</cite>
+</div>
+
+<p>Satan replaced God's appointed times with pagan counterfeits. But God's prophetic calendar cannot be thwarted. Every spring feast was fulfilled to the day. The Day of Atonement was fulfilled to the day. And the Feast of Tabernacles — the great feast of joy, the ingathering, the celebration after the harvest — <strong>will be fulfilled.</strong></p>
+
+<div class="verse">
+"The Feast of Tabernacles was not only commemorative but typical. It not only pointed back to the wilderness sojourn, but, as the feast of harvest, it celebrated the ingathering of the fruits of the earth, and pointed forward to the great day of final ingathering, when the Lord of the harvest shall send forth His reapers."
+<cite>— Patriarchs and Prophets, pp. 541–542</cite>
+</div>
+
+<div class="verse">
+"When the character of Christ shall be perfectly reproduced in His people, then He will come to claim them as His own."
+<cite>— Christ's Object Lessons, p. 69</cite>
+</div>
+
+<div style="text-align:center;margin-top:40px">
+<p style="font-size:clamp(20px,3.5vw,32px);color:#d4af37;font-style:italic">"Even so, come, Lord Jesus."</p>
+<p style="color:rgba(232,224,208,0.5);margin-top:8px">Revelation 22:20</p>
+</div>
+
+<div class="divider" style="margin-top:50px">✦ ✦ ✦</div>
+
+<div style="text-align:center;padding:30px 0">
+<h3>Suggested Further Study</h3>
+<p style="margin-top:12px;line-height:2">
+Daniel 7, 8, 9 • Leviticus 16 & 23 • Hebrews 4, 7–10 • Revelation 10, 14, 20–22<br>
+Ellen G. White: <em>The Great Controversy</em>, chs. 18–24, 39–42<br>
+<em>Patriarchs and Prophets</em>, ch. 52 • <em>The Desire of Ages</em>, ch. 54<br>
+<em>Christ's Object Lessons</em> • <em>Christ in His Sanctuary</em><br>
+Clifford Goldstein, <em>1844 Made Simple</em><br>
+C. Mervyn Maxwell, <em>God Cares</em>, Vol. 1
+</p>
+</div>
+</div>
+
+</body>
+</html>
